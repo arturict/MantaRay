@@ -1,71 +1,49 @@
-/* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
-/* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Glassmorphism v26.01.03 */
+/* MantaFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --holyFinFooterText: "HolyFin v1.0.0";
+    --mantaFinFooterText: "MantaFin v25.11.25";
 
-    /* === HOLYFIN DEEP BLUE COLOR SYSTEM === */
-    /* Elegant Deep Blue Palette */
-    --holyfin-blue-50: #eff6ff;
-    --holyfin-blue-100: #dbeafe;
-    --holyfin-blue-200: #bfdbfe;
-    --holyfin-blue-300: #93c5fd;
-    --holyfin-blue-400: #60a5fa;
-    --holyfin-blue-500: #3b82f6;
-    --holyfin-blue-600: #2563eb;
-    --holyfin-blue-700: #1d4ed8;
-    --holyfin-blue-800: #1e40af;
-    --holyfin-blue-900: #1e3a8a;
-    --holyfin-blue-950: #172554;
-
-    /* Cyan Accents for Play Button */
-    --holyfin-cyan-400: #22d3ee;
-    --holyfin-cyan-500: #06b6d4;
-    --holyfin-cyan-600: #0891b2;
-
-    /* Base theme colors - Deep Blue Edition */
+    /* Base theme colors */
     color-scheme: dark;
-    --darkerGradientPoint: #0a0e1a;
-    --darkerGradientPointAlpha: rgba(10, 14, 26, 0.85);
-    --lighterGradientPoint: #1a1f3a;
-    --lighterGradientPointAlpha: rgba(26, 31, 58, 0.85);
-    --gradientPointAlpha: rgba(30, 58, 138, 0.15);
-    --headerColor: rgba(23, 37, 84, 0.8);
-    --drawerColor: rgba(23, 37, 84, 0.9);
+    --darkerGradientPoint: #111827;
+    --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
+    --lighterGradientPoint: #1d2635;
+    --lighterGradientPointAlpha: rgba(29, 38, 53, 0.85);
+    --gradientPointAlpha: rgba(29, 38, 53, 0.3);
+    --headerColor: rgba(30, 40, 54, 0.8);
+    --drawerColor: rgba(30, 40, 54, 0.9);
 
-    --borderColor: transparent;
-    --darkerBorderColor: transparent;
-    --lighterBorderColor: transparent;
+    --borderColor: hsl(214, 13%, 32%);
+    --darkerBorderColor: hsl(214, 13%, 22%);
+    --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
 
-    --selectorBackgroundColor: rgba(37, 99, 235, 0.2);
-    --selectorBackgroundColorAlpha: rgba(37, 99, 235, 0.3);
+    --selectorBackgroundColor: rgb(55, 65, 81);
+    --selectorBackgroundColorAlpha: rgba(55, 65, 81, 0.5);
 
-    /* HolyFin Primary Colors */
-    --activeColorAlpha: rgba(37, 99, 235, 0.9);
-    --activeColor: rgb(37, 99, 235);
-    --osdSeekBarPlayedColor: var(--holyfin-blue-600);
-    --osdSeekBarBufferedColorAlpha: rgba(59, 130, 246, 0.4);
-    --osdSeekBarThumbColor: var(--holyfin-blue-500);
-    --tableBodyColor: rgba(23, 37, 84, 0.8);
-    --uiAccentColor: rgb(37, 99, 235);
-    --btnMiniPlayColor: var(--holyfin-cyan-500);
-    --btnMiniPlayBorderColor: var(--holyfin-cyan-400);
+    --activeColorAlpha: rgba(119, 91, 244, 0.9);
+    --activeColor: rgb(119, 91, 244);
+    --osdSeekBarPlayedColor: var(--textColor);
+    --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
+    --osdSeekBarThumbColor: white;
+    --tableBodyColor: rgb(31 41 55 / 1);
+    --uiAccentColor: rgb(117 111 226);
+    --btnMiniPlayColor: rgb(41 154 93);
+    --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: var(--holyfin-blue-600);
-    --btnSubmitBorderColor: var(--holyfin-blue-500);
-    --checkboxCheckedBgColor: var(--holyfin-blue-600);
-    --highlightOutlineColor: var(--holyfin-blue-600);
+    --btnSubmitColor: rgb(61, 54, 178);
+    --btnSubmitBorderColor: rgb(117 111 226);
+    --checkboxCheckedBgColor: rgb(79, 70, 229);
+    --highlightOutlineColor: rgb(37, 99, 235);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -254,7 +232,7 @@ body {
 
 #myPreferencesMenuPage > div:after,
 .dashboardFooter::after {
-    content: var(--elegantFinFooterText);
+    content: var(--mantaFinFooterText);
     font-size: 0.8em;
     color: var(--borderColor);
     display: inline-grid;
@@ -326,15 +304,11 @@ body {
 }
 
 .cardScalable {
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: var(--largeRadius);
+    border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
     overflow: hidden !important;
-    background: rgba(30, 58, 138, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.4);
+    transition: transform 125ms;
 }
 
 @supports (aspect-ratio: 1 / 1) {
@@ -351,29 +325,30 @@ body {
 }
 
 .layout-mobile .cardScalable {
-    border: none !important;
+    border: var(--defaultBorder) !important;
 }
 
 .visualCardBox,
 .paperList {
-    background-color: transparent !important;
+    background-color: var(--headerColor) !important;
     border-radius: var(--largeRadius) !important;
-    border: none !important;
+    border: var(--defaultBorder) !important;
     box-shadow: unset !important;
     overflow: hidden;
 }
 
 .layout-desktop .visualCardBox {
-    border: none !important;
+    border-width: var(--borderWidthDouble) !important;
 }
 
 .visualCardBox .cardScalable {
-    border: none !important;
+    border-width: 0 0 var(--borderWidth) 0 !important;
     border-radius: 0 !important;
+    border-color: var(--darkerBorderColor) !important;
 }
 
 .cardImageContainer {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.375s;
 }
 
 .card.squareCard[data-type="TvChannel"] .cardImageContainer.cardContent {
@@ -392,28 +367,17 @@ body {
     color: var(--borderColor);
 }
 
-/* === MODERN GLASSMORPHISM HOVER EFFECTS === */
-.card-hoverable:hover .cardScalable {
-    transform: translateY(-8px) scale(1.02);
-    background: rgba(37, 99, 235, 0.15);
-    border: 1px solid rgba(59, 130, 246, 0.3) !important;
-    box-shadow:
-        0 20px 60px rgba(37, 99, 235, 0.4),
-        0 0 40px rgba(59, 130, 246, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
+.card-hoverable:hover .cardScalable,
 .card-hoverable:hover .visualCardBox {
-    background: rgba(37, 99, 235, 0.08);
+    border-color: white !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
-    border: 1px solid rgba(59, 130, 246, 0.2) !important;
+    border-color: var(--darkerBorderColor) !important;
 }
 
 .card-hoverable:hover .cardImageContainer {
-    transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.05);
+    transform: scale(1.025);
 }
 
 .card-hoverable .itemSelectionPanel {
@@ -422,7 +386,7 @@ body {
 
 .card-hoverable:hover .cardScalable,
 .card-hoverable:hover .itemSelectionPanel {
-    /* Removed transform scale to eliminate square shadow effect */
+    transform: scale(1.02);
 }
 
 .card-hoverable .cardScalable:active {
@@ -436,7 +400,7 @@ body {
 
 .cardOverlayContainer {
     transition: 0.5s;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .cardOverlayContainer:after {
@@ -542,7 +506,7 @@ body {
 }
 
 .cardOverlayContainer:has(> button:hover) {
-    backdrop-filter: none !important;
+    backdrop-filter: var(--blurDefault);
 }
 
 .listViewUserDataButtons {
@@ -557,7 +521,7 @@ body {
 /* episode grid start */
 
 @supports (display: revert) {
-    .layout-desktop .vertical-list:has(.listItem-largeImage) {
+    .vertical-list:has(.listItem-largeImage) {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(var(--minEpisodeCardWidth), 100%), 1fr));
         gap: var(--itemColumnGap);
@@ -1099,6 +1063,7 @@ body {
 #itemDetailPage .emby-scroller,
 #itemDetailPage .scrollX {
     margin: 0 calc(-1 * var(--sidePadding));
+    padding: 0 var(--sidePadding);
     padding-left: calc(var(--sidePadding) - 0.375em);
     /* mask-image: linear-gradient(90deg, transparent, white var(--sidePadding), white calc(100vw - var(--sidePadding)), transparent); */
 }
@@ -1110,12 +1075,8 @@ body {
 }
 
 .emby-scroller,
-.scrollX {
+.hiddenScrollX.scrollX {
     padding-left: calc(var(--sidePadding) - 0.375em);
-}
-
-.sectionTabs .scrollX {
-    padding-left: 0;
 }
 
 .itemsContainer:not(.editorsChoiceItemsContainer) {
@@ -1125,6 +1086,16 @@ body {
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
+}
+
+.sectionTitleContainer-cards {
+    padding-top: 0;
+    margin: 0.75em 0 -0.75em 0;
+}
+
+.layout-mobile :not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+    text-align: left;
+    margin: 0.75em 0 -0.75em 0;
 }
 
 .emby-scrollbuttons,
@@ -1348,7 +1319,7 @@ body {
 
 .layout-tv .detailImageContainer .card {
     width: 25vw !important;
-    display: block !important;
+    display: grid !important;
     position: fixed !important;
     top: 0;
     bottom: 0;
@@ -3001,26 +2972,9 @@ div[data-role="controlgroup"] a.ui-btn-active {
     color: white !important;
 }
 
-.sectionTitleContainer-cards {
-    padding-top: 0;
-    margin: 0.75em 0 -0.75em 0;
-}
-
 .sectionTitleTextButton > * {
-    text-align: left;
-    /* !important are needed for proper alignment on phones */
     padding: 0.3em 0 !important;
     margin: 0 0 !important;
-    /* this prevents long library names from breaking into another line */
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 88vw;
-}
-
-/* this is needed for alignment of non-clickable section headings on phones */
-.layout-mobile :not(.sectionTitleContainer-cards) > .sectionTitle-cards {
-    margin: 0.75em 0 -0.75em 0;
 }
 
 .dashboardSection .sectionTitleTextButton > .material-icons,
@@ -3318,13 +3272,18 @@ div[data-role="controlgroup"] a.ui-btn-active {
     display: var(--itemOriginalTitleVisibility);
 }
 
+.channelPrograms + .channelPrograms,
+.guide-channelHeaderCell + .guide-channelHeaderCell {
+    margin-top: 0;
+}
+
 .channelPrograms,
+.guide-channelHeaderCell,
 .programCell {
     border-color: transparent;
     /* this disables the 'color coded backgrounds' */
     background-color: transparent !important;
     border-radius: var(--smallRadius);
-    height: 4.42em;
 }
 
 .guideProgramName {
@@ -3346,38 +3305,22 @@ div[data-role="controlgroup"] a.ui-btn-active {
     padding: 0;
 }
 
-.layout-mobile .guideChannelImage {
-    background-position: center;
-    width: calc(100% - var(--sidePadding));
-    right: 0;
-}
-
-.guide-channelHeaderCell {
-    background-color: rgba(255, 255, 255, 0.125);
-    margin: 0.35em 0.7em 0.7em 0.7em;
-    width: auto;
-    height: calc(4.42em - 0.7em);
-    border-radius: var(--smallRadius);
-}
-
-.guideChannelNumber {
-    font-size: 1em;
+.guideChannelImage {
+    background-color: rgba(255, 255, 255, 0.05);
+    bottom: 0.35em;
+    right: 0.35em;
+    top: 0.35em;
+    width: calc(100% - 0.7em);
+    border-radius: var(--smallerRadius);
 }
 
 #guideTab {
     padding-top: 3em !important;
 }
 
-.guide-channelHeaderCell:focus {
-    background-color: var(--highlightOutlineColor) !important;
-}
-
+.guide-channelHeaderCell:focus,
 .programCell:focus {
-    background-color: transparent !important;
-}
-
-.programCell:focus > .guideProgramName {
-    background-color: var(--highlightOutlineColor);
+    background-color: var(--highlightOutlineColor) !important;
 }
 
 .emby-select-iconbutton {
@@ -3792,12 +3735,12 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     padding: 0;
 }
 
-.sectionTabs {
-    display: inline-grid;
+.headerTabs.sectionTabs {
+    display: grid;
     height: var(--appBarHeight);
 }
 
-.layout-mobile .sectionTabs {
+.layout-mobile .headerTabs.sectionTabs {
     align-content: center;
 }
 
@@ -3843,7 +3786,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     padding: 0 0.5em;
 }
 
-/* this prevents the section tabs from hiding all the way up on phones (not-tablets)*/
+/* this prevents the section tabs from hiding all the way up */
 .headroom--unpinned {
     -webkit-transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
     transform: translateY(calc(-1 * var(--appBarHeight) - var(--borderWidth)));
@@ -3868,7 +3811,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     overflow: visible !important;
 }
 
-.sectionTabs .emby-tab-button {
+.layout-tv .sectionTabs {
+    /* this prevents the section tabs from being off-center in the music library
+     after I set the overflow to visible to fix visual glitches */
+    width: 70%;
+    margin-right: 2em;
+}
+
+.headerTabs.sectionTabs .emby-tab-button {
     display: inline-flex;
     margin: 0.25em 0.5em;
     padding: 0 1.25em;
@@ -3879,15 +3829,18 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     background-color: var(--darkerGradientPointAlpha);
 }
 
-.sectionTabs .emby-tab-button-active {
+.headerTabs.sectionTabs .emby-tab-button-active {
     margin: 0.25em 0.5em;
     color: black;
     background-color: var(--textColor);
 }
 
-/* this increases page top padding when section tabs are expanded */
-.libraryPage:not(.noSecondaryNavPage) {
-    padding-top: calc(var(--appBarHeight) * 2 + 0.5em) !important;
+.layout-mobile .headerTabs.sectionTabs .emby-tab-button:first-child {
+    margin-left: var(--sidePadding);
+}
+
+.layout-mobile .headerTabs.sectionTabs .emby-tab-button:last-child {
+    margin-right: var(--sidePadding);
 }
 
 @media (min-width: 75em) {
@@ -3898,28 +3851,14 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
         align-self: center;
         -webkit-justify-content: center;
         justify-content: center;
-        /* this collapses the section tabs expanded earlier than the default 100em max-width */
         margin-top: calc(-1 * var(--appBarHeight));
         position: relative;
         width: auto;
     }
 
-    /* this reduces page top padding when section tabs are collapsed */
-    .libraryPage:not(.noSecondaryNavPage) {
-        padding-top: calc(var(--appBarHeight) + 0.5em) !important;
-    }
-
-    /* this fixes the header like on desktop on larger tablet screens */
-    .headroom--unpinned {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@media (min-width: 100em) {
-    /* this reduces top padding when section tabs are collapsed on TVs */
-    .layout-tv .libraryPage:not(.noSecondaryNavPage) {
-        padding-top: calc(var(--appBarHeight) + 0.5em) !important;
+    /* this reduces top page padding when section tabs are minimised */
+    .libraryPage:not(.noSecondaryNavPage):not(.layout-tv .libraryPage) {
+        padding-top: 6.8em !important;
     }
 }
 
@@ -3928,27 +3867,16 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
     .sectionTabs {
         font-size: 100%;
     }
-
-    /* this keeps the section tabs expanded on TVs under 100em width */
-    .layout-tv .sectionTabs {
-        margin-top: unset;
-    }
-
-    /* this increases page top padding when section tabs are expanded on TVs*/
-    .layout-tv .libraryPage:not(.noSecondaryNavPage) {
-        padding-top: calc(var(--appBarHeight) * 2 + 0.5em) !important;
-    }
 }
 
-@media (max-width: 75em) {
-    /* these margins are applied only on phones, not tablets*/
-    .layout-mobile .sectionTabs .emby-tab-button:first-child {
-        margin-left: var(--sidePadding);
-    }
+/* this increased top page padding when section tabs are maximised */
+.libraryPage:not(.noSecondaryNavPage) {
+    padding-top: 9.5em !important;
+}
 
-    .layout-mobile .sectionTabs .emby-tab-button:last-child {
-        margin-right: var(--sidePadding);
-    }
+/* this limits top page padding when section tabs always on TVs */
+.layout-tv .libraryPage:not(.noSecondaryNavPage) {
+    padding-top: 6em !important;
 }
 
 .layout-tv .headerLeft {
@@ -3986,12 +3914,21 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense > div:first-child {
         z-index: -1;
     }
 
-    .sectionTabs {
+    .layout-mobile .headerTop {
+        height: calc(var(--appBarHeight) - 1em);
+    }
+
+    .headerTabs.sectionTabs {
         padding-bottom: 1.5em;
     }
 
-    .layout-mobile .sectionTabs {
+    .layout-mobile .headerTabs.sectionTabs {
         align-content: center;
+    }
+
+    .headroom--unpinned {
+        -webkit-transform: translateY(calc(-0.75 * var(--appBarHeight) - var(--borderWidth)));
+        transform: translateY(calc(-0.75 * var(--appBarHeight) - var(--borderWidth)));
     }
 }
 
@@ -4086,230 +4023,3 @@ for extended styling, use the add-on */
 }
 
 /* basic styling for the Media Bar Plugin - end */
-
-/* ========================================= */
-/* HOLYFIN CUSTOM ENHANCEMENTS - START      */
-/* ========================================= */
-
-/* === HOLYFIN LOGO REPLACEMENT === */
-/* Replace Jellyfin logo with HolyFin SVG logo from CDN */
-/* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
-
-/* Method 1: For img tags - HIDE COMPLETELY to prevent double logo */
-.skinHeader .headerLogo img[src*="logo"],
-.skinHeader .skinHeader-logo img[src*="logo"],
-.pageTitle.pageTitleWithLogo img[src*="logo"],
-.adminDrawerLogo img[src*="logo"],
-.headerLogo,
-.skinHeader-logo {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-/* Logo replacement - ENABLED */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-    background: none !important;
-    background-image: none !important;
-    content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
-    display: inline-block !important;
-    width: 300px !important;
-    height: 80px !important;
-    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
-    text-indent: -9999px !important;
-    overflow: hidden !important;
-}
-
-/* Mobile logo adjustments */
-@media (max-width: 768px) {
-    .skinHeader .headerLogo img[src*="logo"],
-    .pageTitle.pageTitleWithLogo img[src*="logo"] {
-        height: 32px;
-    }
-
-    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        min-width: 120px;
-        min-height: 32px;
-    }
-
-    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 120px;
-        height: 32px;
-    }
-}
-
-/* TV logo adjustments */
-@media (max-width: 1280px) and (min-width: 769px) {
-    .pageTitle.pageTitleWithLogo img[src*="logo"] {
-        height: 48px;
-    }
-
-    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        min-width: 180px;
-        min-height: 48px;
-    }
-
-    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 180px;
-        height: 48px;
-    }
-}
-
-/* === ENHANCED INDIGO ANIMATIONS === */
-/* Smooth transitions everywhere */
-* {
-    transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-/* Enhanced button effects with indigo glow */
-.raised,
-.button-flat,
-.fab {
-    transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(94, 53, 177, 0.2);
-}
-
-.raised:hover,
-.button-flat:hover,
-.fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(94, 53, 177, 0.35);
-}
-
-.raised:active,
-.button-flat:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 4px rgba(94, 53, 177, 0.3);
-}
-
-/* === CARD ENHANCEMENTS === */
-/* Subtle card styling without aggressive transforms */
-.card,
-.itemTile {
-    background: transparent !important;
-    backdrop-filter: none !important;
-    border: none !important;
-    transition: all 0.25s ease-out;
-}
-
-.card:hover,
-.itemTile:hover {
-    background: transparent !important;
-    border: none !important;
-    /* Removed all backdrop, background, and borders */
-}
-
-/* === PROGRESS BARS WITH BLUE GLOW === */
-.itemProgressBar {
-    background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%) !important;
-    box-shadow:
-        0 2px 8px rgba(37, 99, 235, 0.4),
-        0 0 12px rgba(37, 99, 235, 0.2);
-    border-radius: 4px;
-    height: 6px;
-}
-
-/* === CUSTOM DEEP BLUE SCROLLBAR === */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(37, 99, 235, 0.05);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #2563eb 0%, #3b82f6 100%);
-    border-radius: 5px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
-    background-clip: padding-box;
-}
-
-/* === ENHANCED FOCUS STATES === */
-*:focus-visible {
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-
-/* === BLUE SPINNERS === */
-.mdl-spinner__circle-clipper .mdl-spinner__circle {
-    border-color: #2563eb !important;
-}
-
-/* === BADGES AND CHIPS === */
-.chip,
-.badge {
-    background: linear-gradient(135deg, #5E35B1 0%, #673AB7 100%);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 16px;
-    font-weight: 500;
-    box-shadow: 0 2px 6px rgba(94, 53, 177, 0.25);
-}
-
-/* === ENHANCED DIALOGS === */
-.dialogContainer,
-.dialogBackdrop {
-    box-shadow:
-        0 20px 60px rgba(94, 53, 177, 0.3),
-        0 0 1px rgba(94, 53, 177, 0.2);
-}
-
-/* === RIPPLE EFFECT === */
-@keyframes ripple {
-    0% {
-        transform: scale(0);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-.button-flat::before,
-.raised::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.button-flat:active::before,
-.raised:active::before {
-    width: 300px;
-    height: 300px;
-    animation: ripple 0.6s ease-out;
-}
-
-/* === VERSION FOOTER === */
-.settingsContainer::after {
-    content: var(--holyFinFooterText) " | Based on ElegantFin by lscambo13";
-    display: block;
-    text-align: center;
-    padding: 1em;
-    font-size: 0.85em;
-    color: #7E57C2;
-    opacity: 0.7;
-}
-
-/* ========================================= */
-/* HOLYFIN CUSTOM ENHANCEMENTS - END        */
-/* ========================================= */
