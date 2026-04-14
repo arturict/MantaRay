@@ -4113,7 +4113,7 @@ for extended styling, use the add-on */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
-    content: url("https://raw.githubusercontent.com/arturict/MantaRay/main/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png") !important;
+    content: url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/img/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png") !important;
     display: inline-block !important;
     width: 300px !important;
     height: 80px !important;

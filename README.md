@@ -1,5 +1,5 @@
 <!-- Banner Image -->
-<img src="https://raw.githubusercontent.com/arturict/MantaRay/main/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png" alt="MantaFin Theme for Jellyfin - Manta Ray Logo">
+<img src="https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/img/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png" alt="MantaFin Theme for Jellyfin - Manta Ray Logo">
 
 <div align="center">
   <a href="https://www.jsdelivr.com/package/gh/arturict/MantaRay">
