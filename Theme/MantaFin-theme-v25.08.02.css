@@ -1,14 +1,14 @@
-/* HolyFin Theme for Jellyfin by lscambo13 */
+/* MantaFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/extras-media-bar-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --elegantFinFooterText: "HolyFin v25.08.02";
+    --mantaFinFooterText: "MantaFin v25.08.02";
 
     /* Base theme colors */
     color-scheme: dark;
@@ -178,7 +178,7 @@ html {
 }
 
 .dashboardFooter::after {
-    content: var(--elegantFinFooterText);
+    content: var(--mantaFinFooterText);
     font-size: .8em;
     color: #4e4e60;
 }

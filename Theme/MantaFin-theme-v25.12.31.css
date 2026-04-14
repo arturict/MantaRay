@@ -254,7 +254,7 @@ body {
 
 #myPreferencesMenuPage > div:after,
 .dashboardFooter::after {
-    content: var(--elegantFinFooterText);
+    content: var(--mantaFinFooterText);
     font-size: 0.8em;
     color: var(--borderColor);
     display: inline-grid;
