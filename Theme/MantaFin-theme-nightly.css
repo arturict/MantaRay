@@ -1,35 +1,35 @@
-/* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
-/* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.2.1 - Hidden Desktop Markers */
+/* MantaFin Theme for Jellyfin - Elegant Deep Blue Edition */
+/* Based on HolyFin/ElegantFin by lscambo13 - MantaFin Fork */
+/* Version: Deep Blue Glassmorphism v26.01.03 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --holyFinFooterText: "HolyFin v1.0.0";
+    --mantaFinFooterText: "MantaFin v1.2.7";
 
-    /* === HOLYFIN DEEP BLUE COLOR SYSTEM === */
+    /* === MANTAFIN DEEP BLUE COLOR SYSTEM === */
     /* Elegant Deep Blue Palette */
-    --holyfin-blue-50: #eff6ff;
-    --holyfin-blue-100: #dbeafe;
-    --holyfin-blue-200: #bfdbfe;
-    --holyfin-blue-300: #93c5fd;
-    --holyfin-blue-400: #60a5fa;
-    --holyfin-blue-500: #3b82f6;
-    --holyfin-blue-600: #2563eb;
-    --holyfin-blue-700: #1d4ed8;
-    --holyfin-blue-800: #1e40af;
-    --holyfin-blue-900: #1e3a8a;
-    --holyfin-blue-950: #172554;
+    --mantafin-blue-50: #eff6ff;
+    --mantafin-blue-100: #dbeafe;
+    --mantafin-blue-200: #bfdbfe;
+    --mantafin-blue-300: #93c5fd;
+    --mantafin-blue-400: #60a5fa;
+    --mantafin-blue-500: #3b82f6;
+    --mantafin-blue-600: #2563eb;
+    --mantafin-blue-700: #1d4ed8;
+    --mantafin-blue-800: #1e40af;
+    --mantafin-blue-900: #1e3a8a;
+    --mantafin-blue-950: #172554;
 
     /* Cyan Accents for Play Button */
-    --holyfin-cyan-400: #22d3ee;
-    --holyfin-cyan-500: #06b6d4;
-    --holyfin-cyan-600: #0891b2;
+    --mantafin-cyan-400: #22d3ee;
+    --mantafin-cyan-500: #06b6d4;
+    --mantafin-cyan-600: #0891b2;
 
     /* Base theme colors - Deep Blue Edition */
     color-scheme: dark;
@@ -48,24 +48,24 @@
     --selectorBackgroundColor: rgba(37, 99, 235, 0.2);
     --selectorBackgroundColorAlpha: rgba(37, 99, 235, 0.3);
 
-    /* HolyFin Primary Colors */
+    /* MantaFin Primary Colors */
     --activeColorAlpha: rgba(37, 99, 235, 0.9);
     --activeColor: rgb(37, 99, 235);
-    --osdSeekBarPlayedColor: #1e3a8a; /* Dark blue for WATCHED/PLAYED portion */
-    --osdSeekBarBufferedColorAlpha: rgba(255, 255, 255, 0.3); /* Light gray/white for UNWATCHED portion */
-    --osdSeekBarThumbColor: #2563eb; /* Blue slider thumb */
+    --osdSeekBarPlayedColor: var(--mantafin-blue-600);
+    --osdSeekBarBufferedColorAlpha: rgba(59, 130, 246, 0.4);
+    --osdSeekBarThumbColor: var(--mantafin-blue-500);
     --tableBodyColor: rgba(23, 37, 84, 0.8);
     --uiAccentColor: rgb(37, 99, 235);
-    --btnMiniPlayColor: #2563eb; /* Blue play button on cards */
-    --btnMiniPlayBorderColor: #1e40af;
+    --btnMiniPlayColor: var(--mantafin-cyan-500);
+    --btnMiniPlayBorderColor: var(--mantafin-cyan-400);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: var(--holyfin-blue-600);
-    --btnSubmitBorderColor: var(--holyfin-blue-500);
-    --checkboxCheckedBgColor: var(--holyfin-blue-600);
-    --highlightOutlineColor: var(--holyfin-blue-600);
+    --btnSubmitColor: var(--mantafin-blue-600);
+    --btnSubmitBorderColor: var(--mantafin-blue-500);
+    --checkboxCheckedBgColor: var(--mantafin-blue-600);
+    --highlightOutlineColor: var(--mantafin-blue-600);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -168,9 +168,9 @@
     none: makes them always hidden only on mobile */
     --miniOverlayButtonVisibility: block;
 
-    /* use "" to enable the card hover effect [default];
+    /* use "" to enable the card hover effect [default]; 
        use none (without quotes) to disable it */
-    --cardHoverEffect: none;
+    --cardHoverEffect: "";
 
     /* use 5em to enable the fading app bar (seamless); 
        use 4.6em to get the solid app bar (cleaner with border) */
@@ -187,13 +187,6 @@ html {
     font-weight: 425;
     font-style: normal;
     -webkit-tap-highlight-color: transparent !important;
-}
-
-/* Remove any trace of the glassy overlay on cards */
-.cardOverlayContainer:after {
-    content: none !important;
-    background: transparent !important;
-    opacity: 0 !important;
 }
 
 body {
@@ -277,16 +270,10 @@ body {
 
 .cardImageIcon {
     color: var(--borderColor);
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 .cardPadder .cardImageIcon {
     color: var(--selectorBackgroundColorAlpha);
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 .card:focus .cardBox.visualCardBox,
@@ -340,11 +327,13 @@ body {
 
 .cardScalable {
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border for cards */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     overflow: hidden !important;
-    background: transparent !important;
+    background: rgba(30, 58, 138, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: none !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -362,7 +351,7 @@ body {
 }
 
 .layout-mobile .cardScalable {
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border for mobile cards too */
+    border: none !important;
 }
 
 .visualCardBox,
@@ -396,66 +385,91 @@ body {
     padding-top: 1.5em;
     color: transparent;
     white-space: pre;
-    display: block !important;
-    visibility: visible !important;
 }
 
 .cardImageContainer > .cardDefaultText::before {
     content: "?\A";
     color: var(--borderColor);
-    display: block !important;
-    visibility: visible !important;
 }
 
-/* Ensure material icons are visible on cards */
-.cardImageContainer .material-icons,
-.cardContent .material-icons,
-.cardPadder .material-icons {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* === CLEAN HOVER EFFECTS - NO BLUE SHADOWS === */
-.card-hoverable:hover .cardScalable,
-.overflowBackdropCard:hover .cardScalable,
-.card:hover .cardScalable {
+/* === MODERN GLASSMORPHISM HOVER EFFECTS === */
+.card-hoverable:hover .cardScalable {
     transform: translateY(-8px) scale(1.02);
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow:
+        0 20px 60px rgba(37, 99, 235, 0.4),
+        0 0 40px rgba(59, 130, 246, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.card-hoverable:hover .visualCardBox,
-.overflowBackdropCard:hover .visualCardBox,
-.card:hover .visualCardBox {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+.card-hoverable:hover .visualCardBox {
+    background: rgba(37, 99, 235, 0.08);
 }
 
-.card-hoverable:hover .visualCardBox .cardScalable,
-.overflowBackdropCard:hover .visualCardBox .cardScalable,
-.card:hover .visualCardBox .cardScalable {
-    border: none !important;
-    box-shadow: none !important;
+.card-hoverable:hover .visualCardBox .cardScalable {
+    border: 1px solid rgba(59, 130, 246, 0.2) !important;
 }
 
-.card-hoverable:hover .cardImageContainer,
-.overflowBackdropCard:hover .cardImageContainer,
-.card:hover .cardImageContainer {
+.card-hoverable:hover .cardImageContainer {
     transform: scale(1.05);
     filter: brightness(1.1) contrast(1.05);
 }
 
-/* Remove all blue backgrounds and borders from all card types */
-.overflowBackdropCard,
-.card-withuserdata,
-.cardBox,
-.cardBox-bottompadded {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+.card-hoverable .itemSelectionPanel {
+    transition: transform 0.125s;
+}
+
+.card-hoverable:hover .cardScalable,
+.card-hoverable:hover .itemSelectionPanel {
+    /* Removed transform scale to eliminate square shadow effect */
+}
+
+.card-hoverable .cardScalable:active {
+    transition: transform 0.075s;
+    transform: scale(1);
+}
+
+.cardScalable:has(.cardOverlayButton-hover:hover) > .cardImageContainer {
+    transform: scale(1);
+}
+
+.cardOverlayContainer {
+    transition: 0.5s;
+    background: transparent;
+}
+
+.cardOverlayContainer:after {
+    content: var(--cardHoverEffect);
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%) translateX(0);
+    background: var(--hoverGradientV);
+}
+
+.card-hoverable:hover .cardOverlayContainer:after {
+    transform: translateY(50%) translateX(0);
+    opacity: 0;
+}
+
+.backdropCard.card-hoverable .cardOverlayContainer:after,
+.overflowBackdropCard.card-hoverable .cardOverlayContainer:after {
+    transform: translateY(0) translateX(-50%);
+    background: var(--hoverGradientH);
+}
+
+.backdropCard.card-hoverable:hover .cardOverlayContainer:after,
+.overflowBackdropCard.card-hoverable:hover .cardOverlayContainer:after {
+    transform: translateY(0) translateX(50%);
+    opacity: 0;
+}
+
+.cardBox:not(.visualCardBox) .cardPadder {
+    background-color: var(--lighterGradientPoint);
 }
 
 .cardOverlayContainer > .cardOverlayFab-primary {
@@ -475,15 +489,13 @@ body {
     border: var(--defaultLighterBorder);
     border-color: var(--btnMiniPlayBorderColor);
     font-size: 75%;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4); /* Blue glow for play button */
+    box-shadow: var(--shadow);
     z-index: 2;
 }
 
 .cardOverlayContainer > .cardOverlayFab-primary:hover,
 .listItemImageButton:hover {
     color: white;
-    background-color: #1d4ed8 !important; /* Darker blue on hover */
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6); /* Stronger glow on hover */
 }
 
 .cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
@@ -1115,16 +1127,6 @@ body {
     font-size: 1.5rem !important;
 }
 
-/* Remove title borders and shadows */
-h2,
-.sectionTitle,
-.sectionTitleTextButton,
-.sectionTitleContainer {
-    text-shadow: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
 .emby-scrollbuttons,
 [dir="ltr"] .emby-scrollbuttons {
     padding-top: 1.25em;
@@ -1658,7 +1660,7 @@ html,
 
 .itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress) {
     backdrop-filter: var(--blurLarge);
-    background-color: rgba(255, 255, 255, 0.3) !important; /* Light/white for UNWATCHED portion */
+    background-color: var(--osdSeekBarBufferedColorAlpha) !important;
     height: 0.35em;
     overflow: hidden;
     border-radius: var(--largeRadius);
@@ -1676,7 +1678,7 @@ html,
 
 .itemProgressBarForeground {
     border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
-    background-color: #1e3a8a !important; /* Dark blue for WATCHED portion */
+    background-color: var(--dimTextColor);
 }
 
 .backgroundProgress > div,
@@ -1730,12 +1732,11 @@ progress + span {
 
 /* this is the osd player slider */
 .mdl-slider-background-flex {
-    border-radius: 999px !important; /* Smooth rounded edges */
+    border-radius: var(--smallRadius);
     height: 0.4em;
     margin-top: -0.2em;
     background: var(--osdSeekBarBufferedColorAlpha);
     transition: 0.2s linear;
-    overflow: hidden !important;
 }
 
 .sliderContainer:active .mdl-slider-background-flex {
@@ -1745,14 +1746,10 @@ progress + span {
 
 .mdl-slider-background-lower {
     background-color: var(--osdSeekBarPlayedColor);
-    border-radius: 0 !important;
-    margin: 0 !important;
 }
 
 .mdl-slider-background-upper {
     background-color: var(--osdSeekBarBufferedColorAlpha);
-    border-radius: 0 !important;
-    margin: 0 !important;
 }
 
 .mdl-slider::-webkit-slider-thumb {
@@ -1782,38 +1779,16 @@ progress + span {
 }
 
 .sliderMarkerContainer {
-    display: none !important; /* Hide chapter/intro markers completely on desktop */
+    margin: 0 0.1em;
 }
 
 .sliderMarker.watched {
-    display: none !important;
+    background-color: var(--osdSeekBarPlayedColor);
 }
 
 .sliderMarker {
-    display: none !important;
-}
-
-/* Show markers on mobile - they work better there */
-@media (max-width: 768px) {
-    .sliderMarkerContainer {
-        display: block !important;
-        margin: 0 !important;
-    }
-
-    .sliderMarker.watched {
-        display: block !important;
-        background-color: var(--osdSeekBarPlayedColor);
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
-
-    .sliderMarker {
-        display: block !important;
-        height: 4px;
-        border-radius: 999px !important;
-        margin: 0 !important;
-        overflow: hidden !important;
-    }
+    height: 4px;
+    border-radius: 2px;
 }
 
 .iconOsdProgressInner {
@@ -2390,15 +2365,14 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .btnPlay.detailButton {
-    background-color: #2563eb !important; /* Blue play button */
-    color: white !important;
+    background-color: var(--textColor);
+    color: black;
     border-radius: 3em;
-    border-color: #1e40af;
+    border-color: var(--borderColor);
     height: 3em;
     min-width: 10em;
     margin-right: 0.5em !important;
     flex-direction: row;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .btnPlay:not(.formDialogFooterItem):not(.play-button):after {
@@ -3171,9 +3145,8 @@ div[data-role="controlgroup"] a.ui-btn-active {
     }
 
     .btnPlay.detailButton:hover {
-        background-color: #1d4ed8 !important;
-        color: white !important;
-        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+        background-color: var(--textColor);
+        color: black;
     }
 
     .alphaPickerButton:hover {
@@ -4115,11 +4088,11 @@ for extended styling, use the add-on */
 /* basic styling for the Media Bar Plugin - end */
 
 /* ========================================= */
-/* HOLYFIN CUSTOM ENHANCEMENTS - START      */
+/* MANTAFIN CUSTOM ENHANCEMENTS - START      */
 /* ========================================= */
 
-/* === HOLYFIN LOGO REPLACEMENT === */
-/* Replace Jellyfin logo with HolyFin SVG logo from CDN */
+/* === MANTAFIN LOGO REPLACEMENT === */
+/* Replace Jellyfin logo with MantaFin Manta Ray logo from CDN */
 /* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
 
 /* Method 1: For img tags - HIDE COMPLETELY to prevent double logo */
@@ -4136,103 +4109,20 @@ for extended styling, use the add-on */
     height: 0 !important;
 }
 
-/* Force headerTop to have zero left padding when logo is present */
-.headerTop:has(.pageTitle.pageTitleWithLogo) {
-    padding-left: 0 !important;
-    text-align: left !important;
-}
-
-/* Remove ALL borders and outlines from logo parent containers */
-.pageTitle,
-.pageTitle.pageTitleWithLogo,
-h3.pageTitle,
-h3.pageTitle.pageTitleWithLogo,
-h3.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo,
-.skinHeader .pageTitle,
-.skinHeader h3 {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    text-align: left !important;
-}
-
-/* Remove focus state borders and outlines */
-.pageTitle:focus,
-.pageTitle:focus-visible,
-.pageTitle.pageTitleWithLogo:focus,
-.pageTitle.pageTitleWithLogo:focus-visible,
-h3.pageTitle:focus,
-h3.pageTitle:focus-visible {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Logo replacement - NEW METHOD using background-image - NO BORDERS */
+/* Logo replacement - ENABLED */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-    /* Hide the element text completely */
-    font-size: 0 !important;
-    color: transparent !important;
+    background: none !important;
+    background-image: none !important;
+    content: url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/img/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png") !important;
+    display: inline-block !important;
+    width: 300px !important;
+    height: 80px !important;
+    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
     text-indent: -9999px !important;
     overflow: hidden !important;
-
-    /* Remove all borders and styling from container */
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-
-    /* Set container size - MEDIUM LOGO LEFT ALIGNED */
-    display: inline-block !important;
-    width: 176px !important;
-    height: 48px !important;
-    margin: 0.5em 0 0.5em 0 !important;
-    position: relative !important;
 }
 
-/* Use ::before pseudo-element for the actual logo image */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-    content: "" !important;
-    display: block !important;
-    width: 176px !important;
-    height: 48px !important;
-    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@v1.0.6/Theme/assets/img/holyfin-logo.png") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    filter: brightness(1.1);
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Remove borders from logo focus state */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus,
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus-visible {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Ensure ::before stays clean on focus */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus::before,
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus-visible::before {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Remove any ::after borders */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::after {
-    display: none !important;
-}
-
-/* Mobile logo adjustments - MEDIUM AND LEFT ALIGNED */
+/* Mobile logo adjustments */
 @media (max-width: 768px) {
     .skinHeader .headerLogo img[src*="logo"],
     .pageTitle.pageTitleWithLogo img[src*="logo"] {
@@ -4240,61 +4130,31 @@ h3.pageTitle:focus-visible {
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        width: 130px !important;
-        height: 36px !important;
-        margin: 0.5em 0 0.5em 0 !important;
-        display: inline-block !important;
+        min-width: 120px;
+        min-height: 32px;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 130px !important;
-        height: 36px !important;
+        width: 120px;
+        height: 32px;
     }
 }
 
-/* TV logo adjustments - MEDIUM */
+/* TV logo adjustments */
 @media (max-width: 1280px) and (min-width: 769px) {
     .pageTitle.pageTitleWithLogo img[src*="logo"] {
         height: 48px;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        width: 163px !important;
-        height: 44px !important;
+        min-width: 180px;
+        min-height: 48px;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 163px !important;
-        height: 44px !important;
+        width: 180px;
+        height: 48px;
     }
-}
-
-/* === EMPTY LIBRARY PLACEHOLDER === */
-/* Show placeholder icon and message when library is empty */
-.itemsContainer:empty::before,
-.verticalSection:has(.itemsContainer:empty) .itemsContainer::before {
-    content: "\e02c";
-    font-family: "Material Icons Round";
-    font-size: 8em;
-    color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50vh;
-    text-align: center;
-}
-
-.itemsContainer:empty::after,
-.verticalSection:has(.itemsContainer:empty) .itemsContainer::after {
-    content: "Keine Medien gefunden";
-    position: absolute;
-    top: calc(50vh + 2em);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.3);
-    font-weight: 300;
 }
 
 /* === ENHANCED INDIGO ANIMATIONS === */
@@ -4441,7 +4301,7 @@ h3.pageTitle:focus-visible {
 
 /* === VERSION FOOTER === */
 .settingsContainer::after {
-    content: var(--holyFinFooterText) " | Based on ElegantFin by lscambo13";
+    content: var(--mantaFinFooterText) " | Based on HolyFin by lscambo13";
     display: block;
     text-align: center;
     padding: 1em;
@@ -4450,118 +4310,6 @@ h3.pageTitle:focus-visible {
     opacity: 0.7;
 }
 
-/* ================================
-   1) Old "glass/gradient sweep" hover OFF
-   ================================ */
-
-/* If your theme used this toggle, disable it globally */
-:root {
-  --cardHoverEffect: none; /* was "" */
-}
-
-/* Safety: ensure the pseudo overlay doesn't render */
-.cardOverlayContainer:after {
-  content: none !important;
-  background: transparent !important;
-  opacity: 0 !important;
-  transform: none !important;
-}
-
-
-/* ================================
-   2) Parallax Hover (Premium Depth)
-   Targets all cards in scrollers/rows
-   ================================ */
-
-.emby-scroller .itemsContainer .card.card-hoverable {
-  /* give 3D context */
-  perspective: 800px;
-}
-
-.emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
-  transform-origin: center;
-  transform-style: preserve-3d;
-  will-change: transform, filter, box-shadow;
-  transition:
-    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Hover / keyboard focus */
-.emby-scroller .itemsContainer .card.card-hoverable:hover .cardScalable,
-.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.04);
-  filter: brightness(1.07) saturate(1.03);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
-}
-
-/* Click */
-.emby-scroller .itemsContainer .card.card-hoverable:active .cardScalable {
-  transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.02);
-  transition-duration: 90ms;
-}
-
 /* ========================================= */
-/* HOLYFIN CUSTOM ENHANCEMENTS - END        */
+/* MANTAFIN CUSTOM ENHANCEMENTS - END        */
 /* ========================================= */
-
-/* ================================
-   Smart Focus Hover (Netflix-Style) – Jellyfin robust
-   Trigger = .cardScalable:hover / :focus-within
-   ================================ */
-
-/* 1) Wenn irgendwo in der Reihe eine Card aktiv ist: dimme nur die anderen */
-.emby-scroller .itemsContainer:has(.cardScalable:hover) 
-  .cardScalable:not(:hover) {
-  transform: scale(0.985);
-  filter: brightness(0.88) saturate(0.96);
-}
-
-/* 2) Aktive Card (hover) gewinnt */
-.emby-scroller .itemsContainer .cardScalable:hover {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
-  filter: brightness(1.10) saturate(1.05);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
-}
-
-/* 3) Optional: aktive Card über Nachbarn */
-.emby-scroller .itemsContainer .card.card-hoverable { 
-  position: relative;
-  z-index: 0;
-}
-.emby-scroller .itemsContainer .card.card-hoverable:has(.cardScalable:hover) {
-  z-index: 3;
-}
-
-/* 4) Fokus (Keyboard/Remote) */
-.emby-scroller .itemsContainer:has(.card.card-hoverable:focus-within)
-  .card.card-hoverable:not(:focus-within) .cardScalable {
-  transform: scale(0.985);
-  filter: brightness(0.88) saturate(0.96);
-}
-
-.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
-  filter: brightness(1.10) saturate(1.05);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
-}
-
-/* ================================
-   4) Accessibility: Reduced Motion
-   ================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  .emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    filter: none !important;
-    box-shadow: none !important;
-  }
-
-  .emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable .cardScalable {
-    transform: none !important;
-    filter: none !important;
-  }
-}

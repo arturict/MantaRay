@@ -1,35 +1,35 @@
-/* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
-/* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Glassmorphism v26.01.03 */
+/* MantaFin Theme for Jellyfin - Elegant Deep Blue Edition */
+/* Based on HolyFin/ElegantFin by lscambo13 */
+/* MantaFin Fork - Manta Ray Themed Version */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/arturict/MantaRay@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --holyFinFooterText: "HolyFin v1.0.0";
+    --mantaFinFooterText: "MantaFin v1.2.7";
 
-    /* === HOLYFIN DEEP BLUE COLOR SYSTEM === */
-    /* Elegant Deep Blue Palette */
-    --holyfin-blue-50: #eff6ff;
-    --holyfin-blue-100: #dbeafe;
-    --holyfin-blue-200: #bfdbfe;
-    --holyfin-blue-300: #93c5fd;
-    --holyfin-blue-400: #60a5fa;
-    --holyfin-blue-500: #3b82f6;
-    --holyfin-blue-600: #2563eb;
-    --holyfin-blue-700: #1d4ed8;
-    --holyfin-blue-800: #1e40af;
-    --holyfin-blue-900: #1e3a8a;
-    --holyfin-blue-950: #172554;
+    /* === MANTAFIN DEEP BLUE COLOR SYSTEM === */
+    /* Elegant Deep Blue Palette - Manta Ray Theme */
+    --mantafin-blue-50: #eff6ff;
+    --mantafin-blue-100: #dbeafe;
+    --mantafin-blue-200: #bfdbfe;
+    --mantafin-blue-300: #93c5fd;
+    --mantafin-blue-400: #60a5fa;
+    --mantafin-blue-500: #3b82f6;
+    --mantafin-blue-600: #2563eb;
+    --mantafin-blue-700: #1d4ed8;
+    --mantafin-blue-800: #1e40af;
+    --mantafin-blue-900: #1e3a8a;
+    --mantafin-blue-950: #172554;
 
     /* Cyan Accents for Play Button */
-    --holyfin-cyan-400: #22d3ee;
-    --holyfin-cyan-500: #06b6d4;
-    --holyfin-cyan-600: #0891b2;
+    --mantafin-cyan-400: #22d3ee;
+    --mantafin-cyan-500: #06b6d4;
+    --mantafin-cyan-600: #0891b2;
 
     /* Base theme colors - Deep Blue Edition */
     color-scheme: dark;
@@ -48,24 +48,24 @@
     --selectorBackgroundColor: rgba(37, 99, 235, 0.2);
     --selectorBackgroundColorAlpha: rgba(37, 99, 235, 0.3);
 
-    /* HolyFin Primary Colors */
+    /* MantaFin Primary Colors */
     --activeColorAlpha: rgba(37, 99, 235, 0.9);
     --activeColor: rgb(37, 99, 235);
-    --osdSeekBarPlayedColor: var(--holyfin-blue-600);
+    --osdSeekBarPlayedColor: var(--mantafin-blue-600);
     --osdSeekBarBufferedColorAlpha: rgba(59, 130, 246, 0.4);
-    --osdSeekBarThumbColor: var(--holyfin-blue-500);
+    --osdSeekBarThumbColor: var(--mantafin-blue-500);
     --tableBodyColor: rgba(23, 37, 84, 0.8);
     --uiAccentColor: rgb(37, 99, 235);
-    --btnMiniPlayColor: var(--holyfin-cyan-500);
-    --btnMiniPlayBorderColor: var(--holyfin-cyan-400);
+    --btnMiniPlayColor: var(--mantafin-cyan-500);
+    --btnMiniPlayBorderColor: var(--mantafin-cyan-400);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: var(--holyfin-blue-600);
-    --btnSubmitBorderColor: var(--holyfin-blue-500);
-    --checkboxCheckedBgColor: var(--holyfin-blue-600);
-    --highlightOutlineColor: var(--holyfin-blue-600);
+    --btnSubmitColor: var(--mantafin-blue-600);
+    --btnSubmitBorderColor: var(--mantafin-blue-500);
+    --checkboxCheckedBgColor: var(--mantafin-blue-600);
+    --highlightOutlineColor: var(--mantafin-blue-600);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -4088,11 +4088,11 @@ for extended styling, use the add-on */
 /* basic styling for the Media Bar Plugin - end */
 
 /* ========================================= */
-/* HOLYFIN CUSTOM ENHANCEMENTS - START      */
+/* MANTAFIN CUSTOM ENHANCEMENTS - START      */
 /* ========================================= */
 
-/* === HOLYFIN LOGO REPLACEMENT === */
-/* Replace Jellyfin logo with HolyFin SVG logo from CDN */
+/* === MANTAFIN LOGO REPLACEMENT === */
+/* Replace Jellyfin logo with MantaFin Manta Ray logo */
 /* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
 
 /* Method 1: For img tags - HIDE COMPLETELY to prevent double logo */
@@ -4113,7 +4113,7 @@ for extended styling, use the add-on */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
-    content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
+    content: url("https://raw.githubusercontent.com/arturict/MantaRay/main/Gemini_Generated_Image_tqp8uytqp8uytqp8-removebg-preview.png") !important;
     display: inline-block !important;
     width: 300px !important;
     height: 80px !important;
@@ -4301,7 +4301,7 @@ for extended styling, use the add-on */
 
 /* === VERSION FOOTER === */
 .settingsContainer::after {
-    content: var(--holyFinFooterText) " | Based on ElegantFin by lscambo13";
+    content: var(--mantaFinFooterText) " | Based on HolyFin by lscambo13";
     display: block;
     text-align: center;
     padding: 1em;
